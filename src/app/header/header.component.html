@@ -1,0 +1,5 @@
+<header>
+  <button (click)="themeService.toggleTheme()" class="theme-toggle">
+    <span class="icon">{{ themeService.darkMode() ? '🌞' : '🌙' }}</span>
+  </button>
+</header>
