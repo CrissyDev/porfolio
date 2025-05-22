@@ -6,10 +6,9 @@ import { HeroComponent } from './hero/hero.component';
   selector: 'app-root',
   standalone: true,
   imports: [HeaderComponent, HeroComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <app-header></app-header>
+    <app-hero></app-hero>
+  `,
 })
-export class AppComponent {
-themeService: any;
-
-}
+export class AppComponent {}

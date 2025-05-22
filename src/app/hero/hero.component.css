@@ -1,0 +1,114 @@
+:host {
+  display: block;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  padding-top:0;
+  border-top:none;
+}
+
+:root {
+  --bg: #0a0007;
+  --text: #ffffff;
+  --primary: #d946ef;
+  --button-bg: #d946ef;
+  --button-text: #fff;
+}
+
+body.dark-mode {
+  --bg: #0a0007;
+  --text: #ffffff;
+}
+
+body:not(.dark-mode) {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin: 0 0 1rem 0;
+}
+.hero-right img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+}
+
+.role-badge {
+  background-color: var(--primary);
+  color: white;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem
+}
+
+.btn-primary, .btn-outline {
+  padding: 0.5rem 1.2rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-outline{
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+
+.theme-toggle {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.hero{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.hero-left{
+    flex: 1;
+    min-width: 300px;
+}
+.actions{
+    margin-top: 1.5rem;
+    display: flex;
+    gap:1rem;
+}
