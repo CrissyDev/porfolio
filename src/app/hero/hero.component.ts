@@ -10,9 +10,21 @@ import { ThemeService } from '../services/theme.service';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
+  fullName = 'Christal Riziki';
+  typedName = '';
+  index = 0;
+
   constructor(private themeService: ThemeService) {}
 
-  toggleTheme() {
-    this.themeService.toggleTheme();
+  ngOnInit(): void {
+    this.type();
+  }
+
+  type() {
+    if (this.index < this.fullName.length) {
+      this.typedName += this.fullName.charAt(this.index);
+      this.index++;
+      setTimeout(() => this.type(), 120);
+    }
   }
 }

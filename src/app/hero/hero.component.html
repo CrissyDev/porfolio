@@ -1,32 +1,29 @@
 <section class="hero">
   <div class="hero-left">
-    <div class="theme-toggle" (click)="toggleTheme()">
-      <i class="fas fa-moon"></i>
-    </div>
-
     <div class="role-badge">Software Developer</div>
 
-    <h1 class="hero-title">Hello, I'm Christal Riziki</h1>
+    <h1 class="hero-title">
+      Hello, I'm <span class="typewriter">{{ typedName }}</span>
+    </h1>
+
     <p>I build beautiful, functional, and accessible web applications.</p>
 
     <div class="actions">
-      <a class="btn-primary">View Projects →</a>
-      <a class="btn-outline">Contact Me</a>
+      <a class="btn-primary" href="#projects">View Projects →</a>
+      <a class="btn-outline" href="#contact">Contact Me</a>
     </div>
 
-<div class="social-icons">
-  <a href="https://github.com/CrissyDev" target="_blank" aria-label="GitHub">
-    <i class="fa fa-github"></i>
-  </a>
-  <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-    <i class="fa fa-linkedin-square"></i>
-  </a>
-  <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
-    <i class="fa fa-twitter"></i>
-  </a>
-</div>
-
-
+    <div class="social-icons">
+      <a href="https://github.com/CrissyDev" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
   </div>
 
   <div class="hero-right">

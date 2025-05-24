@@ -2,10 +2,19 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
-  toggleTheme() {
-    throw new Error('Method not implemented.');
+  private current: string = 'System';
+
+  getCurrentTheme(): string {
+    return this.current;
   }
+
+  toggleTheme() {
+    const isDark = document.body.classList.contains('dark-mode');
+    this.setTheme(isDark ? 'Light' : 'Dark');
+  }
+
   setTheme(mode: string) {
+    this.current = mode;
     switch (mode.toLowerCase()) {
       case 'light':
         this.applyTheme(false);
@@ -13,7 +22,6 @@ export class ThemeService {
       case 'dark':
         this.applyTheme(true);
         break;
-      case 'system':
       default:
         this.applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
         break;

@@ -12,8 +12,13 @@ import { ThemeService } from '../services/theme.service';
 export class HeaderComponent {
   themeOptions = ['Light', 'Dark', 'System'];
   showThemeMenu = false;
+  currentTheme = 'System';
 
   constructor(private themeService: ThemeService) {}
+
+  ngOnInit(): void {
+    this.currentTheme = this.themeService.getCurrentTheme();
+  }
 
   toggleThemeMenu() {
     this.showThemeMenu = !this.showThemeMenu;
@@ -21,6 +26,15 @@ export class HeaderComponent {
 
   selectTheme(theme: string) {
     this.themeService.setTheme(theme);
+    this.currentTheme = theme;
     this.showThemeMenu = false;
+  }
+
+  get currentThemeIcon(): string {
+    switch (this.currentTheme.toLowerCase()) {
+      case 'light': return 'fa-sun';
+      case 'dark': return 'fa-moon';
+      default: return 'fa-circle-half-stroke';
+    }
   }
 }

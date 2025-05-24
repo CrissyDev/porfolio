@@ -5,13 +5,13 @@
   </div>
 
   <nav class="nav-links">
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 
     <div class="theme-dropdown">
       <button class="theme-toggle" (click)="toggleThemeMenu()">
-        <i class="fas fa-moon"></i>
+        <i class="fas" [ngClass]="currentThemeIcon"></i>
       </button>
       <div class="theme-menu" *ngIf="showThemeMenu">
         <button *ngFor="let theme of themeOptions" (click)="selectTheme(theme)">
@@ -21,4 +21,3 @@
     </div>
   </nav>
 </header>
-
