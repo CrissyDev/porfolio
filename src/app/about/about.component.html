@@ -41,10 +41,10 @@
     <div class="section">
       <h5>Frontend Development</h5>
       <div class="badge-container">
-        <span class="badge">React</span>
+        <span class="badge">Angular</span>
         <span class="badge">Next.js</span>
         <span class="badge">TypeScript</span>
-        <span class="badge">Tailwind CSS</span>
+        <span class="badge">WordPress</span>
         <span class="badge">HTML/CSS</span>
         <span class="badge">JavaScript</span>
       </div>
@@ -54,11 +54,8 @@
       <h5>Backend Development</h5>
       <div class="badge-container">
         <span class="badge">Node.js</span>
-        <span class="badge">Express</span>
         <span class="badge">MongoDB</span>
-        <span class="badge">PostgreSQL</span>
         <span class="badge">REST APIs</span>
-        <span class="badge">GraphQL</span>
       </div>
     </div>
 
@@ -67,21 +64,32 @@
       <div class="badge-container">
         <span class="badge">Git</span>
         <span class="badge">GitHub</span>
-        <span class="badge">Docker</span>
-        <span class="badge">CI/CD</span>
-        <span class="badge">Jest</span>
-        <span class="badge">Figma</span>
       </div>
     </div>
   </div>
 
-  <!-- Experience & Education placeholders -->
-  <div *ngIf="activeTab === 'experience'" class="tab-content">
-    <!-- Experience content will go here -->
+  <div *ngIf="activeTab === 'experience'" class="tab-content experience-tab">
+  <div *ngFor="let exp of experiences" class="experience-card">
+    <div class="header">
+      <h3>{{ exp.title }}</h3>
+      <span class="badge">{{ exp.duration }}</span>
+    </div>
+    <h4 class="company">{{ exp.company }}</h4>
+    <p class="description">{{ exp.description }}</p>
   </div>
+</div>
 
-  <div *ngIf="activeTab === 'education'" class="tab-content">
-    <!-- Education content will go here -->
+
+  <div *ngIf="activeTab === 'education'" class="tab-content education-tab">
+  <div *ngFor="let edu of educations" class="education-card">
+    <div class="header">
+      <h3>{{ edu.degree }}</h3>
+      <span class="badge">{{ edu.duration }}</span>
+    </div>
+    <h4 class="institution">{{ edu.institution }}</h4>
+    <p class="description">{{ edu.description }}</p>
   </div>
+</div>
+
 </section>
 
