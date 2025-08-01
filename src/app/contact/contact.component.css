@@ -1,0 +1,94 @@
+.contact-section {
+  padding: 3rem;
+  background-color: #130a10;
+  color: #fff;
+  text-align: center;
+}
+
+.get-in-touch {
+  background-color: #ef4f9b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+  background-color: #72053e;
+  padding: 15px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+  margin: 0;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ef4f9b;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.send-button {
+  background-color: #ef4f9b;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button i {
+  margin-left: 8px;
+}

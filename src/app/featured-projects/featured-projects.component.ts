@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ContactComponent } from "../contact/contact.component";
 
 interface Project {
   title: string;
@@ -12,7 +13,7 @@ interface Project {
 @Component({
   selector: 'app-featured-projects',
   standalone:true,
-  imports:[CommonModule],
+  imports: [CommonModule, ContactComponent],
   templateUrl: './featured-projects.component.html',
   styleUrls: ['./featured-projects.component.css']
 })
@@ -21,25 +22,25 @@ export class FeaturedProjectsComponent {
 
   projects: Project[] = [
     {
-      title: 'E-commerce Platform',
+      title: ' Shopcart E-commerce Platform',
       description: 'A full-featured online store with product listings, cart, and checkout.',
-      tech: ['Next.js', 'TypeScript', 'Stripe'],
+      tech: ['Angular', 'TypeScript'],
       link: 'https://your-ecommerce.com',
-      image: 'https://via.placeholder.com/600x300?text=E-commerce+Platform'
+      image: 'assests/pexels-olly-974911.jpg'
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for tracking social media performance metrics.',
-      tech: ['React', 'D3.js', 'Tailwind CSS'],
+      title: 'TakaBest E commerce Plartform',
+      description: 'Ecommerce plartform for people in the Waste Managment field.',
+      tech: ['Angular', 'MongoDB', 'Gemini'],
       link: 'https://your-dashboard.com',
-      image: 'https://via.placeholder.com/600x300?text=Social+Dashboard'
+      image: 'assests/pexels-moh-dikko-photography-2151327861-33133680.jpg'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates.',
-      tech: ['React', 'Firebase', 'Material UI'],
+      title: 'ShujaaCare Hospital Managment System',
+      description: 'Hospital Managment System for Cancer Patients.',
+      tech: ['Angular', 'Firebase', 'Gemini'],
       link: 'https://your-taskapp.com',
-      image: 'https://via.placeholder.com/600x300?text=Task+Manager'
+      image: 'assests/doc3.jpg'
     },
     {
       title: 'Portfolio Website',
