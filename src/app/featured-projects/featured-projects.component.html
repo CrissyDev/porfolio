@@ -1,0 +1,37 @@
+<section class="featured-projects-section">
+  <div class="container">
+    <div class="badge">My Work</div>
+    <h2 class="title">Featured Projects</h2>
+    <p class="description">
+      Here are some of my recent projects. Each one was built with care and attention to detail.
+    </p>
+
+    <div class="projects-grid">
+      <div class="card" *ngFor="let project of visibleProjects">
+        <div class="image-container">
+          <img *ngIf="project.image; else placeholder" [src]="project.image" [alt]="project.title" />
+          <ng-template #placeholder>
+            <div class="image-placeholder">
+              <i class="fa fa-image fa-3x"></i>
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="card-content">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="tags">
+            <span *ngFor="let tech of project.tech" class="tag">{{ tech }}</span>
+          </div>
+          <a class="view-link" [href]="project.link" target="_blank">
+            View Project <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-all-btn" *ngIf="!showAll">
+      <button (click)="toggleViewAll()">View All Projects &rarr;</button>
+    </div>
+  </div>
+</section>
