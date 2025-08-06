@@ -32,7 +32,7 @@ export class FeaturedProjectsComponent {
       title: 'TakaBest E commerce Plartform',
       description: 'Ecommerce plartform for people in the Waste Managment field.',
       tech: ['Angular', 'MongoDB', 'Gemini'],
-      link: 'https://your-dashboard.com',
+      link: 'https://ecommerce-taka-t5ob.vercel.app',
       image: 'assests/pexels-moh-dikko-photography-2151327861-33133680.jpg'
     },
     {
