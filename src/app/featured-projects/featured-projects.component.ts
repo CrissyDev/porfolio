@@ -24,7 +24,7 @@ export class FeaturedProjectsComponent {
     {
       title: ' Shopcart E-commerce Platform',
       description: 'A full-featured online store with product listings, cart, and checkout.',
-      tech: ['Angular', 'TypeScript'],
+      tech: ['Angular', 'TypeScript', 'DummyJson'],
       link: 'https://your-ecommerce.com',
       image: 'assests/pexels-olly-974911.jpg'
     },
@@ -38,24 +38,24 @@ export class FeaturedProjectsComponent {
     {
       title: 'ShujaaCare Hospital Managment System',
       description: 'Hospital Managment System for Cancer Patients.',
-      tech: ['Angular', 'Firebase', 'Gemini'],
+      tech: ['Angular', 'Firebase', 'Gemini', 'Lisk'],
       link: 'https://your-taskapp.com',
       image: 'assests/doc3.jpg'
     },
-    {
-      title: 'Portfolio Website',
-      description: 'A personal portfolio website to showcase projects and resume.',
-      tech: ['Angular', 'SCSS', 'Netlify'],
-      link: 'https://your-portfolio.com',
-      image: 'https://via.placeholder.com/600x300?text=Portfolio+Website'
-    },
-    {
-      title: 'AI Face Scanner',
-      description: 'Detects skin issues using facial AI analysis.',
-      tech: ['TensorFlow', 'Python', 'Flask'],
-      link: 'https://your-facescanner.com',
-      image: 'https://via.placeholder.com/600x300?text=Face+Scanner'
-    }
+    // {
+    //   title: 'Portfolio Website',
+    //   description: 'A personal portfolio website to showcase projects and resume.',
+    //   tech: ['Angular', 'SCSS', 'Netlify'],
+    //   link: 'https://your-portfolio.com',
+    //   image: 'https://via.placeholder.com/600x300?text=Portfolio+Website'
+    // },
+    // {
+    //   title: 'AI Face Scanner',
+    //   description: 'Detects skin issues using facial AI analysis.',
+    //   tech: ['TensorFlow', 'Python', 'Flask'],
+    //   link: 'https://your-facescanner.com',
+    //   image: 'https://via.placeholder.com/600x300?text=Face+Scanner'
+    // }
   ];
 
   get visibleProjects() {
