@@ -5,11 +5,9 @@
   --bg-dark: #160911;
   --text-light: #fff;
 
-  /* Light mode colors */
   --bg-light: #ffffff;
   --text-dark: #222222;
 
-  /* Other vars */
   --tab-bg-light: #f0f0f0;
   --card-bg-light: #ffffff;
   --card-border-light: rgba(0, 0, 0, 0.1);
@@ -24,7 +22,6 @@ body:not(.dark-mode) {
   --text-dark: #000000;
 }
 
-/* Your featured-projects-section */
 .featured-projects-section {
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -35,11 +32,9 @@ body:not(.dark-mode) {
 }
 
 body:not(.dark-mode) .featured-projects-section {
-  background-color: #f7f1f3;  /* light pinkish, suits white background */
-  color: #222222;             /* dark text for readability */
+  background-color: #f7f1f3; 
+  color: #222222;             
 }
-
-/* ... rest of your featured-projects-section styles remain the same but with variables replaced by static colors or variables */
 
 .featured-projects-section .container {
   max-width: 1200px;
@@ -66,13 +61,13 @@ body:not(.dark-mode) .featured-projects-section {
 
 .description {
   font-size: 1rem;
-  color: #666;  /* darker than #ccc for light mode */
+  color: #666;  
   line-height: 1.5;
   margin-bottom: 2rem;
 }
 
 body:not(.dark-mode) .description {
-  color: #444; /* darker text in light mode */
+  color: #444; 
 }
 
 .projects-grid {
