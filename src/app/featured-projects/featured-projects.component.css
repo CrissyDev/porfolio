@@ -1,10 +1,45 @@
+:root {
+  --primary: #9a2545;
+
+  /* Dark mode colors */
+  --bg-dark: #160911;
+  --text-light: #fff;
+
+  /* Light mode colors */
+  --bg-light: #ffffff;
+  --text-dark: #222222;
+
+  /* Other vars */
+  --tab-bg-light: #f0f0f0;
+  --card-bg-light: #ffffff;
+  --card-border-light: rgba(0, 0, 0, 0.1);
+  --card-shadow-light: rgba(0, 0, 0, 0.1);
+
+  --text-company-light: #000000;      
+  --text-description-light: #000000;  
+}
+
+body:not(.dark-mode) {
+  --bg-light: #ffffff;
+  --text-dark: #000000;
+}
+
+/* Your featured-projects-section */
 .featured-projects-section {
-  background-color: #1a040d;
-  color: #f0f0f0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
   padding: 4rem 1rem;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body:not(.dark-mode) .featured-projects-section {
+  background-color: #f7f1f3;  /* light pinkish, suits white background */
+  color: #222222;             /* dark text for readability */
+}
+
+/* ... rest of your featured-projects-section styles remain the same but with variables replaced by static colors or variables */
 
 .featured-projects-section .container {
   max-width: 1200px;
@@ -31,9 +66,13 @@
 
 .description {
   font-size: 1rem;
-  color: #ccc;
+  color: #666;  /* darker than #ccc for light mode */
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+
+body:not(.dark-mode) .description {
+  color: #444; /* darker text in light mode */
 }
 
 .projects-grid {
@@ -45,7 +84,7 @@
 }
 
 .card {
-  background-color: #1b0b15;
+  background-color: var(--card-bg-dark);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 0 transparent;
@@ -53,6 +92,12 @@
   border: 1px solid #2a0d20;
   max-width: 380px;
   margin: 0 auto;
+}
+
+body:not(.dark-mode) .card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .card:hover {
@@ -93,12 +138,21 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
+body:not(.dark-mode) .card-content h3 {
+  color: #222;
 }
 
 .card-content p {
   font-size: 0.95rem;
   color: #aaa;
   margin-bottom: 0.8rem;
+}
+
+body:not(.dark-mode) .card-content p {
+  color: #444;
 }
 
 .tags {
