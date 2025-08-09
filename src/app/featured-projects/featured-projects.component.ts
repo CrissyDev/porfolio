@@ -25,7 +25,7 @@ export class FeaturedProjectsComponent {
       title: ' Shopcart E-commerce Platform',
       description: 'A full-featured online store with product listings, cart, and checkout.',
       tech: ['Angular', 'TypeScript', 'DummyJson'],
-      link: 'https://your-ecommerce.com',
+      link: 'https://shop-cart-6ysa.vercel.app/',
       image: 'assests/pexels-olly-974911.jpg'
     },
     {
