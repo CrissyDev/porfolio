@@ -39,16 +39,16 @@ export class FeaturedProjectsComponent {
       title: 'ShujaaCare Hospital Managment System',
       description: 'Hospital Managment System for Cancer Patients.',
       tech: ['Angular', 'Firebase', 'Gemini', 'Lisk'],
-      link: 'https://your-taskapp.com',
+      link: 'https://shujaa-care-wu1q.vercel.app/',
       image: 'assests/doc3.jpg'
     },
-    // {
-    //   title: 'Portfolio Website',
-    //   description: 'A personal portfolio website to showcase projects and resume.',
-    //   tech: ['Angular', 'SCSS', 'Netlify'],
-    //   link: 'https://your-portfolio.com',
-    //   image: 'https://via.placeholder.com/600x300?text=Portfolio+Website'
-    // },
+     {
+      title: 'Eden Link',
+      description: 'Smart Agricultural Farming plartform, Integrating a smart monitor in Hydroponics',
+     tech: ['Angular', 'Gemini', 'MongoDB', 'RasberryPI'],
+      link: 'https://edenlink-iota.vercel.app/',
+      image: 'assests/pexels-jatuphon-buraphon-110709-348689.jpg'
+     },
     // {
     //   title: 'AI Face Scanner',
     //   description: 'Detects skin issues using facial AI analysis.',
