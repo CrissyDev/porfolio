@@ -97,3 +97,19 @@
 .social-icons a:hover {
   color: var(--primary);
 }
+.btn-download {
+  background: #ff4da6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #ff3399;
+  transform: translateY(-2px);
+}
