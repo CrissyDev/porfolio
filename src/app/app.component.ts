@@ -8,10 +8,10 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ CommonModule,HeaderComponent, HeroComponent, AboutComponent, RouterOutlet],
+  imports: [ CommonModule,HeaderComponent,HeroComponent, AboutComponent, RouterOutlet],
   template: `
     <app-header></app-header>
-    <app-hero></app-hero>
+     <app-hero></app-hero> 
     <router-outlet></router-outlet> 
 
     <div class="nav-buttons">
