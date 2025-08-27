@@ -5,9 +5,10 @@
   </div>
 
   <nav class="nav-links">
-    <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
-    <a routerLink="/featured-projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projects</a>
-    <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact</a>
+    <a (click)="scrollTo('home')" [class.active]="currentSection === 'home'">Home</a>
+    <a (click)="scrollTo('about')" [class.active]="currentSection === 'about'">About</a>
+    <a (click)="scrollTo('projects')" [class.active]="currentSection === 'projects'">Projects</a>
+    <a (click)="scrollTo('contact')" [class.active]="currentSection === 'contact'">Contact</a>
 
     <div class="theme-dropdown">
       <button class="theme-toggle" (click)="toggleThemeMenu()">
