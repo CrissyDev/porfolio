@@ -5,7 +5,7 @@ import { FeaturedProjectsComponent } from "../featured-projects/featured-project
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, FeaturedProjectsComponent],
+  imports: [CommonModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })

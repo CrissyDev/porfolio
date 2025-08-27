@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports:[CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
@@ -18,25 +18,31 @@ export class ContactComponent {
   };
 
   sendMessage() {
+    const serviceID = 'service_gdv6wqn'; 
+    const templateID = 'template_116wi01'; 
+    const publicKey = 'SrnSORaR4WTA4NNC3'; 
+
     emailjs
       .send(
-        'your_service_id', 
-        'your_template_id', 
+        serviceID, 
+        templateID, 
         {
           from_name: this.form.name,
           from_email: this.form.email,
-          message: this.form.message
+          message: this.form.message,
+          to_email: 'christalriziki@gmail.com'
         },
-        'your_public_key' 
+        publicKey
       )
       .then(
-        () => {
+        (response) => {
+          console.log('Email sent successfully!', response);
           alert('Message sent successfully!');
           this.form = { name: '', email: '', message: '' };
         },
         (error) => {
-          alert('Failed to send message. Please try again.');
           console.error('EmailJS error:', error);
+          alert('Failed to send message. Please try again.');
         }
       );
   }

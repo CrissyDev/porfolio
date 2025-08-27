@@ -13,7 +13,7 @@ interface Project {
 @Component({
   selector: 'app-featured-projects',
   standalone:true,
-  imports: [CommonModule, ContactComponent],
+  imports: [CommonModule],
   templateUrl: './featured-projects.component.html',
   styleUrls: ['./featured-projects.component.css']
 })
