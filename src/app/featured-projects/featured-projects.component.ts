@@ -38,7 +38,7 @@ export class FeaturedProjectsComponent {
     {
       title: 'ShujaaCare Hospital Managment System',
       description: 'Hospital Managment System for Cancer Patients.',
-      tech: ['Angular', 'Firebase', 'Gemini', 'Lisk'],
+      tech: ['Angular', 'Firebase', 'Gemini', 'Lisk', 'python'],
       link: 'https://shujaa-care-wu1q.vercel.app/',
       image: 'assests/doc3.jpg'
     },
@@ -49,13 +49,13 @@ export class FeaturedProjectsComponent {
       link: 'https://edenlink-iota.vercel.app/',
       image: 'assests/pexels-jatuphon-buraphon-110709-348689.jpg'
      },
-    // {
-    //   title: 'AI Face Scanner',
-    //   description: 'Detects skin issues using facial AI analysis.',
-    //   tech: ['TensorFlow', 'Python', 'Flask'],
-    //   link: 'https://your-facescanner.com',
-    //   image: 'https://via.placeholder.com/600x300?text=Face+Scanner'
-    // }
+     {
+       title: 'Menestrual App',
+       description: 'App to provide female reproductive  health insights ',
+      tech: ['React'],
+      link: 'https://femicare-smoky.vercel.app/',
+      image: 'assests/ptg2.jpeg'
+     }
   ];
 
   get visibleProjects() {
