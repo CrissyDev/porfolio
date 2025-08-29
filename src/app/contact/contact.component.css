@@ -104,48 +104,53 @@
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid var(--input-border-dark);
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: var(--input-bg-dark);
   color: var(--input-text-dark);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1rem;
   font-family: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 6px var(--primary);
+  box-shadow: 0 0 8px rgba(154, 37, 69, 0.3);
   background-color: #3c1629;
 }
 
 .contact-form textarea {
   min-height: 120px;
+  resize: vertical;
 }
 
 .send-button {
   background-color: var(--btn-bg-dark);
   border: none;
   color: var(--text-light);
-  padding: 12px;
-  border-radius: 5px;
+  padding: 14px 24px;
+  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.send-button i {
-  margin-left: 8px;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .send-button:hover {
   background-color: var(--btn-hover-dark);
+  transform: translateY(-2px);
 }
 
 /* LIGHT MODE overrides */
@@ -177,16 +182,19 @@ body:not(.dark-mode) .contact-form textarea {
   background-color: var(--input-bg-light);
   color: var(--input-text-light);
   border: 1px solid var(--input-border-light);
-  font-size: 1rem;
-  font-family: inherit;
+}
+
+body:not(.dark-mode) .contact-form input::placeholder,
+body:not(.dark-mode) .contact-form textarea::placeholder {
+  color: rgba(34, 34, 34, 0.7);
 }
 
 body:not(.dark-mode) .contact-form input:focus,
 body:not(.dark-mode) .contact-form textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 6px var(--primary);
-  background-color: #fff0f4;
+  box-shadow: 0 0 8px rgba(154, 37, 69, 0.3);
+  background-color: #fff;
 }
 
 body:not(.dark-mode) .send-button {
@@ -196,4 +204,32 @@ body:not(.dark-mode) .send-button {
 
 body:not(.dark-mode) .send-button:hover {
   background-color: var(--btn-hover-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
 }
