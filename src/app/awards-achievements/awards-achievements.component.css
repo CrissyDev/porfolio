@@ -1,0 +1,150 @@
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --card-light: #f9f9f9;
+  --card-dark: #1e1e1e;
+  --text-light: #1a1a1a;
+  --text-dark: #f1f1f1;
+  --accent: #d63384;
+}
+
+/* Container */
+.awards-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .awards-section {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* Cards grid (3,3 layout) */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.award-card {
+  background: var(--card-light);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+  text-align: left;
+}
+
+body.dark-mode .award-card {
+  background: var(--card-dark);
+}
+
+.award-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Buttons */
+button {
+  margin-top: 15px;
+  padding: 8px 14px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #a81f64;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--bg-light);
+  color: var(--text-light);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .modal {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.evidence-content {
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* Back Button */
+.back-btn {
+  background: #555;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #333;
+}

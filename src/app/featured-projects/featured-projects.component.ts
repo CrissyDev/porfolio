@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ContactComponent } from "../contact/contact.component";
+import { AwardsAchievementsComponent } from "../awards-achievements/awards-achievements.component";
 
 interface Project {
   title: string;
@@ -13,7 +14,7 @@ interface Project {
 @Component({
   selector: 'app-featured-projects',
   standalone:true,
-  imports: [CommonModule],
+  imports: [CommonModule, AwardsAchievementsComponent],
   templateUrl: './featured-projects.component.html',
   styleUrls: ['./featured-projects.component.css']
 })
@@ -57,6 +58,8 @@ export class FeaturedProjectsComponent {
       image: 'assests/ptg2.jpeg'
      }
   ];
+awards: any;
+hoverIndex: any;
 
   get visibleProjects() {
     return this.showAll ? this.projects : this.projects.slice(0, 3);
