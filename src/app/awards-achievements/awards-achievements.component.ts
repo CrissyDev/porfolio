@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-awards-achievements',
-  imports:[CommonModule],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './awards-achievements.component.html',
   styleUrls: ['./awards-achievements.component.css'],
 })
@@ -12,6 +13,14 @@ export class AwardsAchievementsComponent {
   selectedAward: any = null;
 
   awards = [
+    {
+      title: 'Tech Community Leader',
+      organization: 'Google',
+      year: '2025',
+      description:
+        'Recognized for organizing monthly developer meetups and fostering community growth.',
+      evidence: 'Event highlights and testimonials.',
+    },
     {
       title: 'Code Her Care Hackathon Winner',
       organization: 'Kenya Tech Events',
@@ -25,11 +34,11 @@ export class AwardsAchievementsComponent {
       organization: 'GDG Pwani',
       year: '2025',
       description:
-        'Won a 2nd Runners Up position  after presenting my solution Takabest',
-      evidence: 'Picture of AWarding',
+        'Won a 2nd Runners Up position after presenting my solution Takabest',
+      evidence: 'Picture of Awarding',
     },
     {
-      title: ' Roots to Grow Hackathon Winner',
+      title: 'Roots to Grow Hackathon Winner',
       organization: 'Daobab',
       year: '2024',
       description:
@@ -40,26 +49,16 @@ export class AwardsAchievementsComponent {
       title: 'Blue Economy Summit Hackathon Winner',
       organization: 'Sotehub',
       year: '2024',
-      description:
-        'Won the first position with our Project Tidy Safetynet',
+      description: 'Won the first position with our Project Tidy Safetynet',
       evidence: 'Evidence picture of the Award',
     },
-    
     {
-      title: 'Tech Community Leader',
-      organization: 'DevMeetup',
-      year: '2021',
+      title: 'Mozilla CommonVoice Hackathon',
+      organization: 'Swahilipot',
+      year: '2023',
       description:
-        'Recognized for organizing monthly developer meetups and fostering community growth.',
-      evidence: 'Event highlights and testimonials.',
-    },
-    {
-      title: 'Innovation in AI',
-      organization: 'AI Summit',
-      year: '2021',
-      description:
-        'Awarded for developing an AI-based predictive model for sustainable agriculture.',
-      evidence: 'Research paper and presentation slides.',
+        'Awarded for developing an AI-based voice model for Health Systems',
+      evidence: 'Link to post',
     },
   ];
 

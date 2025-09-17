@@ -22,6 +22,18 @@ body.dark-mode .awards-section {
   color: var(--text-dark);
 }
 
+/* Recognition Badge */
+.recognition-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
 .section-title {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -32,7 +44,7 @@ body.dark-mode .awards-section {
   opacity: 0.8;
 }
 
-/* Cards grid (3,3 layout) */
+/* Cards grid */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -58,8 +70,8 @@ body.dark-mode .awards-section {
   background: var(--card-light);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s, color 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
   text-align: left;
 }
 
@@ -69,7 +81,7 @@ body.dark-mode .award-card {
 
 .award-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .icon {

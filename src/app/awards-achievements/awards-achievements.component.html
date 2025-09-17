@@ -1,4 +1,7 @@
 <div class="awards-section">
+  <!-- Recognition Tag -->
+  <div class="recognition-badge">Recognition</div>
+
   <h2 class="section-title">Awards & Achievements</h2>
   <p class="section-subtitle">
     Recognition for my contributions to the tech community and professional achievements.
@@ -23,7 +26,9 @@
   <div class="modal-backdrop" *ngIf="selectedAward">
     <div class="modal">
       <h3>{{ selectedAward.title }}</h3>
-      <p><strong>{{ selectedAward.organization }} • {{ selectedAward.year }}</strong></p>
+      <p>
+        <strong>{{ selectedAward.organization }} • {{ selectedAward.year }}</strong>
+      </p>
       <p>{{ selectedAward.description }}</p>
 
       <div class="evidence-content">
