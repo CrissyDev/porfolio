@@ -51,11 +51,11 @@ export class FeaturedProjectsComponent {
       image: 'assests/pexels-jatuphon-buraphon-110709-348689.jpg'
      },
      {
-       title: 'Menestrual App',
-       description: 'App to provide female reproductive  health insights ',
+       title: 'SeedCheck',
+       description: 'Frontend UI for a Male Reproductive health Platform ',
       tech: ['React'],
-      link: 'https://femicare-smoky.vercel.app/',
-      image: 'assests/ptg2.jpeg'
+      link: 'https://seed-check.vercel.app/',
+      image: 'assests/seedcheck.jpeg'
      }
   ];
 awards: any;
