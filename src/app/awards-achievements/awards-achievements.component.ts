@@ -9,8 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./awards-achievements.component.css'],
 })
 export class AwardsAchievementsComponent {
-  hoverIndex: number = -1;
-  selectedAward: any = null;
 
   awards = [
     {
@@ -19,54 +17,47 @@ export class AwardsAchievementsComponent {
       year: '2025',
       description:
         'Recognized for organizing monthly developer meetups and fostering community growth.',
-      evidence: 'Event highlights and testimonials.',
+      evidence: 'https://example.com/google-community-proof',
     },
     {
       title: 'Code Her Care Hackathon Winner',
       organization: 'Kenya Tech Events',
       year: '2025',
       description:
-        'Recognized for outstanding performance and innovative solutions in Software development.',
-      evidence: '1st Place Position Image',
+        'Recognized for outstanding performance and innovative solutions.',
+      evidence: 'https://example.com/code-her-care',
     },
     {
-      title: 'GDG Pwani Kachiri and Code Hackathon Winner',
+      title: 'GDG Pwani & Code Hackathon Winner',
       organization: 'GDG Pwani',
       year: '2025',
       description:
-        'Won a 2nd Runners Up position after presenting my solution Takabest',
-      evidence: 'Picture of Awarding',
+        '2nd Runners Up after presenting Takabest.',
+      evidence: 'https://example.com/takabest-award',
     },
     {
       title: 'Roots to Grow Hackathon Winner',
       organization: 'Daobab',
       year: '2024',
       description:
-        'Won first place in a 48-hour hackathon with an innovative web application for social good.',
-      evidence: 'Hackathon project demo & winner certificate.',
+        'First place in a 48-hour hackathon for social good.',
+      evidence: 'https://example.com/roots-to-grow',
     },
     {
       title: 'Blue Economy Summit Hackathon Winner',
       organization: 'Sotehub',
       year: '2024',
-      description: 'Won the first position with our Project Tidy Safetynet',
-      evidence: 'Evidence picture of the Award',
+      description:
+        'First position with Project Tidy Safetynet.',
+      evidence: 'https://example.com/blue-economy',
     },
     {
       title: 'Mozilla CommonVoice Hackathon',
       organization: 'Swahilipot',
       year: '2023',
       description:
-        'Awarded for developing an AI-based voice model for Health Systems',
-      evidence: 'Link to post',
+        'AI-based voice model for health systems.',
+      evidence: 'https://example.com/commonvoice',
     },
   ];
-
-  openEvidence(award: any) {
-    this.selectedAward = award;
-  }
-
-  closeEvidence() {
-    this.selectedAward = null;
-  }
 }

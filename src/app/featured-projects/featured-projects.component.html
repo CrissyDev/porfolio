@@ -9,7 +9,11 @@
     <div class="projects-grid">
       <div class="card" *ngFor="let project of visibleProjects">
         <div class="image-container">
-          <img *ngIf="project.image; else placeholder" [src]="project.image" [alt]="project.title" />
+          <img
+            *ngIf="project.image; else placeholder"
+            [src]="project.image"
+            [alt]="project.title"
+          />
           <ng-template #placeholder>
             <div class="image-placeholder">
               <i class="fa fa-image fa-3x"></i>
@@ -18,11 +22,17 @@
         </div>
 
         <div class="card-content">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
-          <div class="tags">
-            <span *ngFor="let tech of project.tech" class="tag">{{ tech }}</span>
+          <div class="card-top">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+
+            <div class="tags">
+              <span *ngFor="let tech of project.tech" class="tag">
+                {{ tech }}
+              </span>
+            </div>
           </div>
+
           <a class="view-link" [href]="project.link" target="_blank">
             View Project <span>&rarr;</span>
           </a>
@@ -30,9 +40,13 @@
       </div>
     </div>
 
-    <div class="view-all-btn" *ngIf="!showAll">
-      <button (click)="toggleViewAll()">View All Projects &rarr;</button>
+    <!-- 🔁 TOGGLE BUTTON -->
+    <div class="view-all-btn">
+      <button (click)="toggleViewAll()">
+        {{ showAll ? 'Reduce Projects ↑' : 'View All Projects →' }}
+      </button>
     </div>
   </div>
 </section>
+
 <app-awards-achievements></app-awards-achievements>

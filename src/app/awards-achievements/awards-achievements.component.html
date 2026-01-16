@@ -1,5 +1,5 @@
 <div class="awards-section">
-  <!-- Recognition Tag -->
+  
   <div class="recognition-badge">Recognition</div>
 
   <h2 class="section-title">Awards & Achievements</h2>
@@ -8,34 +8,21 @@
   </p>
 
   <div class="cards-container">
-    <div
-      class="award-card"
-      *ngFor="let award of awards; let i = index"
-      (mouseenter)="hoverIndex = i"
-      (mouseleave)="hoverIndex = -1"
-    >
+    <div class="award-card" *ngFor="let award of awards">
       <div class="icon">🏅</div>
+
       <h3>{{ award.title }}</h3>
       <p class="meta">{{ award.organization }} • {{ award.year }}</p>
       <p class="description">{{ award.description }}</p>
-      <button (click)="openEvidence(award)">View Evidence</button>
-    </div>
-  </div>
 
-  <!-- Evidence Modal -->
-  <div class="modal-backdrop" *ngIf="selectedAward">
-    <div class="modal">
-      <h3>{{ selectedAward.title }}</h3>
-      <p>
-        <strong>{{ selectedAward.organization }} • {{ selectedAward.year }}</strong>
-      </p>
-      <p>{{ selectedAward.description }}</p>
-
-      <div class="evidence-content">
-        <p>{{ selectedAward.evidence }}</p>
-      </div>
-
-      <button class="back-btn" (click)="closeEvidence()">⬅ Back</button>
+      <a
+        class="evidence-btn"
+        [href]="award.evidence"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Evidence →
+      </a>
     </div>
   </div>
 </div>
