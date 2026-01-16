@@ -58,6 +58,13 @@ export class FeaturedProjectsComponent {
       image: 'assests/seedcheck.jpeg'
      },
      {
+       title: 'Quick Score',
+       description: 'A Credit Scoring Application ',
+      tech: ['NextJS'],
+      link: 'https://quick-score.vercel.app/',
+      image: 'assests/pexels-tima-miroshnichenko-6694571.jpg'
+     },
+     {
        title: 'Gbrand Media Agency',
        description: 'Clients business website ',
       tech: ['Angular'],
