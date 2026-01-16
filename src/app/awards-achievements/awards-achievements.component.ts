@@ -17,7 +17,7 @@ export class AwardsAchievementsComponent {
       year: '2025',
       description:
         'Recognized for organizing monthly developer meetups and fostering community growth.',
-      evidence: 'https://example.com/google-community-proof',
+      evidence: 'https://x.com/Crissytech/status/1966935890368090270?s=20',
     },
     {
       title: 'Code Her Care Hackathon Winner',
@@ -25,7 +25,7 @@ export class AwardsAchievementsComponent {
       year: '2025',
       description:
         'Recognized for outstanding performance and innovative solutions.',
-      evidence: 'https://example.com/code-her-care',
+      evidence: 'https://www.linkedin.com/posts/christal-riziki-470029280_herhealth-activity-7356200500184150016-Ug7E?utm_source=share&utm_medium=member_desktop&rcm=ACoAAERY4VQBLJThphlCJaxinZ7YCIEyso_0v18',
     },
     {
       title: 'GDG Pwani & Code Hackathon Winner',
@@ -33,7 +33,7 @@ export class AwardsAchievementsComponent {
       year: '2025',
       description:
         '2nd Runners Up after presenting Takabest.',
-      evidence: 'https://example.com/takabest-award',
+      evidence: 'https://www.linkedin.com/posts/christal-riziki-470029280_kachiriandcode-iwd2025-gdgpwani-activity-7318426672582615041-aAf0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAERY4VQBLJThphlCJaxinZ7YCIEyso_0v18',
     },
     {
       title: 'Roots to Grow Hackathon Winner',
