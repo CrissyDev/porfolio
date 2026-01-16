@@ -56,6 +56,13 @@ export class FeaturedProjectsComponent {
       tech: ['React'],
       link: 'https://seed-check.vercel.app/',
       image: 'assests/seedcheck.jpeg'
+     },
+     {
+       title: 'Gbrand Media Agency',
+       description: 'Clients business website ',
+      tech: ['Angular'],
+      link: 'https://gbrand-media-agency.vercel.app/',
+      image: 'assests/pexels-cottonbro-5082237.jpg'
      }
   ];
 awards: any;
