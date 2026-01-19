@@ -114,3 +114,30 @@ body.dark-mode .award-card {
 body.dark-mode .evidence-btn {
   color: #fff;
 }
+
+.evidence-btn {
+  display: block !important;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background-color: #d63384 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  text-decoration: none !important;
+  text-align: center;
+  border: 2px solid #d63384;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+
+.evidence-btn:hover {
+  background-color: #a81f64 !important;
+  border-color: #a81f64;
+}
+
+body.dark-mode .evidence-btn {
+  background-color: #d63384 !important;
+  color: #ffffff !important;
+}
