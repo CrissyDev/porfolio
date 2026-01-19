@@ -13,6 +13,18 @@ export class AboutComponent {
   activeTab: string = 'skills';
 
   experiences = [
+     {
+      title: 'Tech Lead',
+      company: 'Angular Kenya.',
+      duration: 'November 2025-Present',
+      description: `Training and mentorship on Angular Framework, Organizing Community Events and Meetups`
+    },
+     {
+      title: 'Community and Tech Lead',
+      company: 'Pwani Teknowgalz.',
+      duration: 'September 2025-Present',
+      description: `Handling Github Community, Training women on software Development`
+    },
     {
       title: 'Frontend Developer',
       company: 'Phonix Dimas.',
