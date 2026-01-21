@@ -1,6 +1,3 @@
-/* ===============================
-   ROOT VARIABLES
-================================ */
 :root {
   --primary: #9a2545;
 
@@ -25,9 +22,6 @@
   --input-border-light: #d6366f;
 }
 
-/* ===============================
-   BASE SECTION
-================================ */
 .contact-section {
   padding: 3rem;
   background-color: var(--bg-dark);
@@ -51,9 +45,6 @@
   margin-bottom: 2rem;
 }
 
-/* ===============================
-   LAYOUT
-================================ */
 .contact-container {
   display: flex;
   gap: 3rem;
@@ -86,9 +77,6 @@
   font-weight: 600;
 }
 
-/* ===============================
-   FORM – DARK MODE
-================================ */
 .contact-form {
   max-width: 480px;
   width: 100%;
@@ -144,9 +132,6 @@
   transform: translateY(-2px);
 }
 
-/* ===============================
-   🌞 LIGHT MODE (FINAL FIX)
-================================ */
 body:not(.dark-mode) .contact-section {
   background-color: var(--bg-light);
   color: var(--text-dark);
@@ -160,7 +145,6 @@ body:not(.dark-mode) .icon {
   background-color: var(--icon-bg-light);
 }
 
-/* FORM CARD — THIS FIXES INVISIBILITY */
 body:not(.dark-mode) .contact-form {
   background-color: #ffffff;
   padding: 2rem;
@@ -169,7 +153,6 @@ body:not(.dark-mode) .contact-form {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* INPUTS */
 body:not(.dark-mode) .contact-form input,
 body:not(.dark-mode) .contact-form textarea {
   background-color: #ffffff;
@@ -188,20 +171,13 @@ body:not(.dark-mode) .contact-form textarea:focus {
   box-shadow: 0 0 0 3px rgba(154, 37, 69, 0.15);
 }
 
-/* BUTTON */
-body:not(.dark-mode) .send-button {
-  background-color: var(--btn-bg-light);
-  color: #ffffff;
-  box-shadow: 0 6px 18px rgba(214, 54, 111, 0.35);
+body:not(.dark-mode) .contact-form input,
+body:not(.dark-mode) .contact-form textarea {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 3px solid #9a2545 !important;
 }
 
-body:not(.dark-mode) .send-button:hover {
-  background-color: var(--btn-hover-light);
-}
-
-/* ===============================
-   RESPONSIVE
-================================ */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -223,3 +199,14 @@ body:not(.dark-mode) .send-button:hover {
     margin-right: 0;
   }
 }
+
+body:not(.dark-mode) .contact-form {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(214, 54, 111, 0.08),
+    rgba(214, 54, 111, 0.08) 10px,
+    transparent 10px,
+    transparent 20px
+  ) !important;
+}
+
