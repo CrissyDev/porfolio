@@ -1,4 +1,4 @@
-<div class="contact-section">
+<div class="contact-section" id="contact">
   <button class="get-in-touch">Get In Touch</button>
 
   <h2>Let's Work Together</h2>
@@ -11,60 +11,33 @@
     <div class="contact-info">
       <h3 class="contact-title">Connect with me</h3>
 
-      <div class="social-links">
+      <div class="contact-social-icons">
         <a href="mailto:christalriziki@gmail.com" aria-label="Email">
           <i class="fas fa-envelope"></i>
         </a>
 
-        <a href="https://github.com/CrissyDev" target="_blank" aria-label="GitHub">
+        <a href="https://github.com/CrissyDev" target="_blank">
           <i class="fab fa-github"></i>
         </a>
 
-        <a
-          href="https://www.linkedin.com/in/christal-riziki-470029280/"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin-in"></i>
+        <a href="https://www.linkedin.com/in/christal-riziki-470029280/" target="_blank">
+          <i class="fab fa-linkedin"></i>
         </a>
 
-        <a href="https://twitter.com/CrissyTech" target="_blank" aria-label="Twitter">
+        <a href="https://twitter.com/CrissyTech" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
     </div>
 
     <!-- FORM -->
-    <form
-      class="contact-form"
-      (ngSubmit)="sendMessage()"
-      #contactForm="ngForm"
-    >
-      <input
-        type="text"
-        name="user_name"
-        [(ngModel)]="form.name"
-        placeholder="Your name"
-        required
-      />
+    <form class="contact-form" (ngSubmit)="sendMessage()" #contactForm="ngForm">
+      <input type="text" name="user_name" [(ngModel)]="form.name" placeholder="Your name" required />
+      <input type="email" name="user_email" [(ngModel)]="form.email" placeholder="Your email" required />
+      <textarea name="message" [(ngModel)]="form.message" placeholder="Your message" required></textarea>
 
-      <input
-        type="email"
-        name="user_email"
-        [(ngModel)]="form.email"
-        placeholder="Your email"
-        required
-      />
-
-      <textarea
-        name="message"
-        [(ngModel)]="form.message"
-        placeholder="Your message"
-        required
-      ></textarea>
-
-      <button class="send-button" type="submit">
-        Send Message
+      <button type="submit" class="send-button">
+        <span>Send Message</span>
         <i class="fas fa-paper-plane"></i>
       </button>
     </form>

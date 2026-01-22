@@ -1,18 +1,11 @@
 :root {
   --primary: #d6366f;
-
   --bg-dark: #130a10;
   --bg-light: #f7f2f5;
-
   --text-light: #ffffff;
   --text-dark: #222222;
-
-  --accent: #d6366f;
 }
 
-/* =======================
-   SECTION
-======================= */
 .contact-section {
   padding: 3rem;
   background-color: var(--bg-dark);
@@ -21,32 +14,20 @@
 }
 
 .subtitle {
-  color: #cccccc;
   margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
-/* =======================
-   BUTTON
-======================= */
 .get-in-touch {
-  background-color: var(--accent);
+  background-color: var(--primary);
   color: #fff;
   padding: 8px 18px;
   border-radius: 20px;
   border: none;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.get-in-touch:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(214, 54, 111, 0.45);
-}
-
-/* =======================
-   LAYOUT
-======================= */
 .contact-container {
   display: flex;
   gap: 3rem;
@@ -54,51 +35,30 @@
   flex-wrap: wrap;
 }
 
-/* =======================
-   SOCIAL ICONS
-======================= */
-.contact-info {
-  max-width: 300px;
-}
-
-.contact-title {
-  margin-bottom: 1rem;
-}
-
-.social-links {
+.contact-social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.social-links a {
-  width: 52px;
-  height: 52px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background-color: var(--accent);
-  color: #fff;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-  text-decoration: none;
+.contact-social-icons a {
+  font-size: 1.6rem;
+  color: inherit; 
+  transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(214, 54, 111, 0.45);
+.contact-social-icons a:hover {
+  color: var(--primary);
 }
 
-/* =======================
-   FORM
-======================= */
 .contact-form {
   max-width: 480px;
   width: 100%;
   padding: 2.2rem;
   border-radius: 18px;
   background-color: #ffffff;
-  border: 3px solid var(--accent);
-  box-shadow: 0 24px 60px rgba(214, 54, 111, 0.3);
+  border: 3px solid var(--primary);
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -108,29 +68,14 @@
 .contact-form textarea {
   padding: 14px;
   border-radius: 12px;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--primary);
   font-size: 1rem;
   color: #222;
 }
 
-.contact-form textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(214, 54, 111, 0.25);
-}
-
-/* =======================
-   SEND BUTTON
-======================= */
 .send-button {
-  margin-top: 0.5rem;
-  background-color: var(--accent);
-  color: #fff;
+  background-color: var(--primary);
+  color: #ffffff !important; 
   padding: 14px;
   border-radius: 14px;
   border: none;
@@ -140,63 +85,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: all 0.3s ease;
 }
 
-.send-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(214, 54, 111, 0.45);
-}
-
-/* =======================
-   LIGHT MODE
-======================= */
 body:not(.dark-mode) .contact-section {
   background-color: var(--bg-light);
   color: var(--text-dark);
-}
-
-body:not(.dark-mode) .subtitle {
-  color: #555555;
-}
-
-/* Light mode - social icons use brand color */
-body:not(.dark-mode) .social-links a {
-  background-color: var(--accent); /* pink */
-  color: #fff; /* white icon for contrast */
-}
-
-body:not(.dark-mode) .social-links a:hover {
-  background-color: #ff80ab; /* lighter pink on hover */
-  color: #fff;
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(214, 54, 111, 0.45);
-}
-
-/* Light mode - form border and inputs */
-body:not(.dark-mode) .contact-form {
-  background-color: #ffffff;
-  border: 3px solid var(--accent);
-  box-shadow: 0 24px 60px rgba(214, 54, 111, 0.15);
-}
-
-body:not(.dark-mode) .contact-form input,
-body:not(.dark-mode) .contact-form textarea {
-  border: 2px solid var(--accent);
-  color: #222;
-  background-color: #fff;
-}
-
-/* =======================
-   MOBILE
-======================= */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
 }
