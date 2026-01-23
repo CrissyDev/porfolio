@@ -87,6 +87,7 @@
   gap: 8px;
 }
 
+/*this is the body i am working on */
 body:not(.dark-mode) .contact-section {
   background-color: var(--bg-light);
   color: var(--text-dark);
