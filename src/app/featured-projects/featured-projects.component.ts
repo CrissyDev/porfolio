@@ -70,6 +70,20 @@ export class FeaturedProjectsComponent {
       tech: ['Angular'],
       link: 'https://gbrand-media-agency.vercel.app/',
       image: 'assests/pexels-cottonbro-5082237.jpg'
+    }, 
+    {
+      title: 'Personal Portfolio',
+      description: 'Client portfolio website.',
+      tech: ['React'],
+      link: 'https://dr-anisa-portfolio.vercel.app/v',
+      image: 'assests/pexels-shkrabaanthony-4348401.jpg'
+    }, 
+    {
+      title: 'Shefights Cancer Foundation',
+      description: 'Client business website.',
+      tech: ['React'],
+      link: 'https://she-fights-cancer-foundation.vercel.app/',
+      image: 'assests/shefigts.jpeg'
     }
   ];
 

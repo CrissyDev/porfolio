@@ -10,8 +10,6 @@
   --card-bg-dark: #1f0c18;
 }
 
-/* ================= SECTION ================= */
-
 .featured-projects-section {
   background-color: var(--bg-dark);
   color: var(--text-light);
@@ -22,15 +20,13 @@
 
 body:not(.dark-mode) .featured-projects-section {
   background-color: #f7f1f3;
-  color: #222;
+  color: var(--text-dark);
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
 }
-
-/* ================= HEADER ================= */
 
 .badge {
   display: inline-block;
@@ -57,22 +53,32 @@ body:not(.dark-mode) .description {
   color: #444;
 }
 
-/* ================= GRID ================= */
-
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: stretch;
 }
 
-/* ================= CARD ================= */
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .card {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 380px;
-  margin: auto;
+  width: 100%;
   background-color: var(--card-bg-dark);
   border-radius: 14px;
   overflow: hidden;
@@ -81,19 +87,20 @@ body:not(.dark-mode) .description {
 }
 
 body:not(.dark-mode) .card {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* ================= IMAGE ================= */
-
 .image-container {
-  height: 170px;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
   background: #eee;
 }
 
@@ -112,13 +119,11 @@ body:not(.dark-mode) .card {
   justify-content: center;
 }
 
-/* ================= CONTENT ================= */
 
 .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  flex: 1;
   padding: 1.2rem;
   text-align: left;
 }
@@ -137,13 +142,13 @@ body:not(.dark-mode) .card {
   line-height: 1.5;
   margin-bottom: 0.8rem;
   color: #aaa;
+  min-height: 60px; 
 }
 
 body:not(.dark-mode) .card-content p {
   color: #444;
 }
 
-/* ================= TAGS ================= */
 
 .tags {
   margin-bottom: 1rem;
@@ -157,9 +162,13 @@ body:not(.dark-mode) .card-content p {
   font-size: 0.75rem;
   border-radius: 999px;
   margin: 0 0.4rem 0.4rem 0;
+  transition: background-color 0.3s ease;
 }
 
-/* ================= LINK ================= */
+.tag:hover {
+  background-color: #a61b46;
+}
+
 
 .view-link {
   align-self: flex-start;
@@ -167,31 +176,14 @@ body:not(.dark-mode) .card-content p {
   font-weight: 600;
   text-decoration: none;
   margin-top: auto;
+  transition: color 0.3s ease;
 }
 
 .view-link:hover {
   text-decoration: underline;
+  color: #ff2e63;
 }
 
-/* ================= BUTTON ================= */
-
-.view-all-btn {
-  margin-top: 3rem;
-}
-
-.view-all-btn button {
-  background-color: #e11d48;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.6rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.view-all-btn button:hover {
-  background-color: #c10c3f;
-}
 
 .view-all-btn {
   margin-top: 3rem;
